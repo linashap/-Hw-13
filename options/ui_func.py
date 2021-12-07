@@ -1,25 +1,25 @@
 
-from options.func import *
+from options.classes import *
 from options.exceptions import *
 
 def ui(x,y,znak):
    
 #-----------------------------------------------------------------
     if znak=="+":
-        return(ad (x,y))
+        return(m.ad (x,y))
     if znak=="-":
-       return( sub (x,y))
+       return( m.sub (x,y))
     if znak=="*":
         if y==0:
             print("Вы умножаете на ноль и ждете неожиданного результата?")
-            return(mul(x,y))
+            return(m.mul(x,y))
         else:
-            return(mul(x,y))
+            return(m.mul(x,y))
     if znak=="//":
-        return(expchekfloor(x,y))
+        expchekfloor(x,y)
     if znak=="/":
-        return(expchektruediv(x,y))
-    else:
+        expchektruediv(x,y)
+    if znak!="/" and znak!="//" and znak!="*" and znak!="-" and znak!="+":
         raise(NEtotsimvil)
 
 def check(x,y):

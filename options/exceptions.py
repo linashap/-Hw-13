@@ -1,4 +1,4 @@
-from options.func import *
+from options.classes import *
 
 
 
@@ -8,7 +8,7 @@ def expchekfloor(x,y):
     except ZeroDivisionError as err:
             print(f"Делить на ноль это грех,{err}")
     else:
-        return(floordiv(x,y))
+        return(m.floordiv(x,y))
 
 
 def expchektruediv(x,y):
@@ -17,7 +17,7 @@ def expchektruediv(x,y):
     except ZeroDivisionError as err:
             print(f"Делить на ноль это грех,{err}")
     else:
-        return(truediv(x,y))
+        return(m.truediv(x,y))
 
 class NEtotsimvil(Exception):
         def __init__(self, mess="Этот символ не обрабатывается нашим калькулятором") -> None:
